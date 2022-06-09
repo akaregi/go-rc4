@@ -9,7 +9,7 @@ func PRGA(S []byte, text []byte) []byte {
 		i = (i + 1) % 256
 		j = (j + int(S[i])) % 256
 
-		S[i], S[j] = S[i], S[j]
+		S[j], S[i] = S[i], S[j]
 
 		K := S[(S[i]+S[j])%255]
 
